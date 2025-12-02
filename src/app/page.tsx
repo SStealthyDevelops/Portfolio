@@ -17,6 +17,40 @@ export default function Home() {
         <main className={`${inria.className} h-screen bg-[#111111] text-white overflow-y-scroll snap-y snap-mandatory scroll-smooth`}>
             <BackToTop />
             <section className="snap-start relative h-screen bg-[#131313] flex items-center justify-center">
+
+                <header className="absolute top-6 left-0 right-0 px-8 md:px-16">
+                    <nav className="flex justify-end gap-6 md:gap-10 text-[10px] md:text-xs tracking-[0.35em] uppercase">
+                        <a
+                            href="https://www.linkedin.com/in/satvik-mathur"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="border-b border-transparent hover:border-white/70 hover:opacity-100 opacity-70 transition-all"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="#aether"
+                            className="border-b border-transparent hover:border-white/70 hover:opacity-100 opacity-70 transition-all"
+                        >
+                            Aether
+                        </a>
+                        <a
+                            href="#trainafy"
+                            className="border-b border-transparent hover:border-white/70 hover:opacity-100 opacity-70 transition-all"
+                        >
+                            Trainafy
+                        </a>
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="border-b border-transparent hover:border-white/70 hover:opacity-100 opacity-70 transition-all"
+                        >
+                            Resume
+                        </a>
+                    </nav>
+                </header>
+
                 <div className="text-center">
                     <h1 className="text-4xl md:text-8xl tracking-[0.35em] uppercase">
                         SATVIK MATHUR

@@ -85,7 +85,7 @@ export const projects: Project[] = [
         " techniques. It parses user documents to learn their writing style and turn it into data that could be used to condition GPT-5's outputs. Coming to" +
         " the public December 2025.",
         "https://aethereditor.com",
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "chKfaSTEaZA",
         '#785905',
         [TechStackItems.electron, TechStackItems.react, TechStackItems.supabase, TechStackItems.openAi, TechStackItems.tailwind]
     ),
@@ -93,7 +93,7 @@ export const projects: Project[] = [
         "Trainafy",
         "Trainafy is a cross-platform mobile app that creates workouts for users based on their schedule and access to equipment. It uses a proprietary holistic algorithm that compiles the best exercises and training structure to match any given user’s access to equipment and their goals. It was built using React Native on the Expo.dev platform for ease of development and deployment speed. The backend was handled by Google Firebase, using the Firestore database to handle user equipment, programs, and training progress.",
         undefined,
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "IDr4gIriWvg",
         '#123b6c',
         [TechStackItems.reactNative, TechStackItems.expoDev, TechStackItems.firebase, TechStackItems.tailwind]
     ),

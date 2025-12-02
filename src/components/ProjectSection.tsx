@@ -2,7 +2,7 @@
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import {LinkIcon} from "lucide-react";
-import {Project} from "@/lib/project-list";
+import {Project, TechStackComponent} from "@/lib/project-list";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import React from "react";
 import {Tooltip} from "next/dist/next-devtools/dev-overlay/components/tooltip/tooltip";
@@ -10,7 +10,7 @@ import {Tooltip} from "next/dist/next-devtools/dev-overlay/components/tooltip/to
 
 const ProjectSection = ({title, description, link, youtubeEmbedUrl, color, stack}: Project) => {
     return (
-        <section className="snap-start px-8 h-screen md:px-40 py-44 relative" style={{backgroundColor: color}}>
+        <section id={`${title.toLowerCase()}`} className="snap-start px-8 h-screen md:px-40 py-44 relative" style={{backgroundColor: color}}>
             <div className="flex items-center gap-4">
                 {link ?
                     <a href={link} target='_blank' className='flex flex-row items-center gap-4 hover:cursor-pointer group'>
@@ -31,7 +31,7 @@ const ProjectSection = ({title, description, link, youtubeEmbedUrl, color, stack
                     <LiteYouTubeEmbed style={{
                         width: '100%',
                         height: '100%',
-                    }} id='PEc0URQrTGo' title='Demo' />
+                    }} id={youtubeEmbedUrl || ''} title='Demo' />
                 </div>
 
                 <div className="flex flex-col justify-between">
@@ -43,10 +43,9 @@ const ProjectSection = ({title, description, link, youtubeEmbedUrl, color, stack
                     <p className="text-2xl tracking-[0.25em] uppercase">
                         Tech Stack:
                     </p>
-                    <div className="mt-3 flex gap-10 border  drop-shadow-2xl">
+                    <div className="mt-3 flex gap-10 border p-4 drop-shadow-2xl">
                         {stack.length > 0 && stack.map(stackItem => (
-                            React.createElement(stackItem.icon, {className: 'h-14 w-14 text-white/80 my-6 mx-6 text-gray-800 hover:scale-105' +
-                                    ' transition-transform hover:cursor-pointer hover:drop-shadow-2xl', key: stackItem.name})
+                            <TechStackComponent techStackItem={stackItem} key={stackItem.name} />
                         ))}
                     </div>
                 </div>
