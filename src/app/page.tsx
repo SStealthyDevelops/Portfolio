@@ -5,6 +5,7 @@ import ProjectSection from "@/components/ProjectSection";
 import {projects} from "@/lib/project-list";
 import {ArrowDown} from "lucide-react";
 import AboutMeSection from "@/components/AboutMeSection";
+import BackToTop from "@/components/BackToTop";
 
 const inria = Inria_Serif({
     subsets: ["latin"],
@@ -14,7 +15,7 @@ const inria = Inria_Serif({
 export default function Home() {
     return (
         <main className={`${inria.className} h-screen bg-[#111111] text-white overflow-y-scroll snap-y snap-mandatory scroll-smooth`}>
-
+            <BackToTop />
             <section className="snap-start relative h-screen bg-[#131313] flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl md:text-8xl tracking-[0.35em] uppercase">
